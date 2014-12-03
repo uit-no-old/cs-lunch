@@ -4,8 +4,8 @@ layout: default
 
 The CS-lunch is a seminar series at the Department of Computers Science at the
 University of Tromsø. Ph. D. students at the department will present their
-ongoing work for both academic staff and students. It is an open seminar where
-we wish to include all of the different research groups at the department.  
+accepted conference and journal papers for both academic staff and students.
+
 
 We are beginning the seminar series in January 2015, and we're hoping to see you
 there! 

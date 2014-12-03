@@ -5,8 +5,8 @@ permalink: /about/
 ---
 
 The CS-lunch is for PhD students, and it is established for the presentations of
-accepted conference and journal papers to the other PhD students and the staff
-at the department.  Usually such a presentation will be done before the actual
+accepted conference and journal papers to the other students and the staff
+at the department. Usually such a presentation will be done before the actual
 conference presentation. This will give the presenter valuable feedback. 
 
 The CS-lunch at the department is an important part of the PhD studies.  These
