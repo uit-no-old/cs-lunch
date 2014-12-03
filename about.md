@@ -4,8 +4,14 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+The CS-lunch is for PhD students, and it is established for the presentations of
+accepted conference and journal papers to the other PhD students and the staff
+at the department.  Usually such a presentation will be done before the actual
+conference presentation. This will give the presenter valuable feedback. 
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+The CS-lunch at the department is an important part of the PhD studies.  These
+events are an opportunity to present your research results, to participate in
+research discussion, to provide arguments (and counter-arguments), and to share
+your knowledge (and questions).  You should not miss that opportunity, and it
+should be high on your priority list (only a few acceptable arguments to not
+participate exits)
