@@ -3,20 +3,18 @@ layout: default
 ---
 
 The CS-lunch is a seminar series at the Department of Computers Science at the
-University of Tromsø. Ph. D. students at the department will present work that 
+University of Tromsø. Ph. D. students at the department will present their
+ongoing work for both academic staff and students. It is an open seminar where
+we wish to include all of the different research groups at the department.  
 
-We are beginning the seminar series in January 2015, and
-we're hoping to see you there! 
-
-## Contact 
-- Bjørn Fjukstad ([bjorn@cs.uit.no](mailto:bjorn@cs.uit.no))
-- Einar Holsbø  ([einar@cs.uit.no](mailto:einar@cs.uit.no))
+We are beginning the seminar series in January 2015, and we're hoping to see you
+there! 
 
 
 
-### News
+### Latest News
   <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in site.posts limit:3 %}
       <li>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
@@ -26,6 +24,3 @@ we're hoping to see you there!
       </li>
     {% endfor %}
   </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
