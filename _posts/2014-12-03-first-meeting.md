@@ -37,7 +37,7 @@ timeslot, with 30 minutes presentations and 15 minutes for discussion and
 feedback. 
 
 On a more technical note, we are going to keep an updated webpage at
-[lunch.cs.uit.no](http://lunch.cs.uit.no) and try to profile the seminar series
+[lunch.cs.uit.no](http://lunch.cs.uit.no) and try to promote the seminar series
 through a Facebook-page as well. 
 
 In addition to the CS-lunch seminar we also wish to organize social
