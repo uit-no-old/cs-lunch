@@ -1,0 +1,4 @@
+---
+- hosts: lunch
+  roles:
+      - role: runs_website
