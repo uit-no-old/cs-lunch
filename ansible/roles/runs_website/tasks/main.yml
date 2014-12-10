@@ -1,0 +1,66 @@
+---
+- name: have us locale
+  locale_gen: name=en_US.UTF-8 state=present
+
+- name: lc_all 
+  lineinfile: dest=~/.bashrc line='export LC_ALL="en_US.UTF-8"'
+      
+- name: lc and that
+  lineinfile: dest=~/.bashrc line='export LC_CTYPE="en_US.UTF-8"'
+
+- name: have a bunch of different apt packages
+  sudo: yes    
+  apt: name={{ item }} 
+  with_items: 
+     - make
+     - gcc
+     - nodejs
+     - git 
+#     - ruby1.9.3
+#     - ruby-dev
+
+- name: have rvm and that jazz
+  sudo: yes
+  shell: "\\curl -sSL https://get.rvm.io | bash -s stable"
+
+# you may need to run
+# sudo gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+# on your server to get the oneliner above to work. 
+
+- name: let rvm do its thing with packages and that 
+  sudo: yes
+  shell: "rvm autolibs enable"
+  environment:
+        PATH: /usr/local/rvm/bin/:{{ ansible_env.PATH }} 
+
+- name: have ruby
+  sudo: yes
+  shell: "rvm install ruby-1.9.3-p551 --with-opt-dir=/usr/local/ssl"
+  environment:
+        PATH: /usr/local/rvm/bin/:{{ ansible_env.PATH }} 
+
+- name: have correct version of ruby set up 
+  sudo: yes
+  shell: "rvm --default use 1.9.3"
+  environment:
+        PATH: /usr/local/rvm/bin/:{{ ansible_env.PATH }} 
+
+- name: have jekyll installed
+  sudo: yes 
+  shell: gem install jekyll executable="/bin/bash"
+  environment:
+        PATH: /usr/local/rvm/bin/:/usr/local/rvm/rubies/ruby-1.9.3-p551/bin/:{{ ansible_env.PATH }} 
+      #executable=true
+
+- name: have cs-lunch website repo
+  sudo: yes
+  git: repo=https://github.com/fjukstad/cs-lunch.git dest=/lunch
+
+
+- name: have upstart job description
+  sudo: yes
+  copy: src=website.conf dest=/etc/init/website.conf
+
+- name: have website running
+  sudo: yes
+  service: name=website state=started
