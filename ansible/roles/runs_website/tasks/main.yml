@@ -16,6 +16,7 @@
      - gcc
      - nodejs
      - git 
+     - apache2
 #     - ruby1.9.3
 #     - ruby-dev
 
@@ -57,10 +58,12 @@
   git: repo=https://github.com/fjukstad/cs-lunch.git dest=/lunch
 
 
-- name: have upstart job description
-  sudo: yes
-  copy: src=website.conf dest=/etc/init/website.conf
-
-- name: have website running
-  sudo: yes
-  service: name=website state=started
+- name: have built the webpage
+  sudo: yes 
+  shell: "jekyll build -s /lunch -d /var/www" 
+  environment:
+        PATH: /usr/local/rvm/bin/:/usr/local/rvm/rubies/ruby-1.9.3-p551/bin/:{{ ansible_env.PATH }} 
+ 
+- name: have restart apache service
+  sudo: yes 
+  service: name=apache2 state=restarted 
