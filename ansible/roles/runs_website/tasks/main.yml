@@ -8,6 +8,9 @@
 - name: lc and that
   lineinfile: dest=~/.bashrc line='export LC_CTYPE="en_US.UTF-8"'
 
+- name: have node thing set up 
+  shell: "curl -sL https://deb.nodesource.com/setup | sudo bash -" 
+  
 - name: have a bunch of different apt packages
   sudo: yes    
   apt: name={{ item }} 
@@ -17,6 +20,7 @@
      - nodejs
      - git 
      - apache2
+#     - npm
 #     - ruby1.9.3
 #     - ruby-dev
 
@@ -48,10 +52,32 @@
 
 - name: have jekyll installed
   sudo: yes 
-  shell: gem install jekyll executable="/bin/bash"
+  shell: gem install jekyll rdiscount json executable="/bin/bash"
   environment:
         PATH: /usr/local/rvm/bin/:/usr/local/rvm/rubies/ruby-1.9.3-p551/bin/:{{ ansible_env.PATH }} 
       #executable=true
+      
+- name: have forever installed 
+  sudo: yes 
+  npm: name=forever global=yes
+
+- name: have jekyll-hook repo 
+  sudo: yes
+  git: repo=https://github.com/developmentseed/jekyll-hook.git dest=/jekyll-hook
+
+- name: have npm configured correctly 
+  shell: npm config set registry http://registry.npmjs.org/
+
+- name: have jekyll-hook installed
+  shell: npm install chdir=/jekyll-hook
+
+- name: have jekyll-hook config file
+  sudo: yes 
+  copy: src=config.json dest=/jekyll-hook 
+
+- name: have correct publish script 
+  sudo: yes
+  copy: src=publish.sh dest=/jekyll-hook
 
 - name: have cs-lunch website repo
   sudo: yes
