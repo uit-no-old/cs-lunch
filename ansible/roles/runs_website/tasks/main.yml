@@ -10,6 +10,14 @@
 
 - name: have node thing set up 
   shell: "curl -sL https://deb.nodesource.com/setup | sudo bash -" 
+
+- name: have open port 80 to the world (website) 
+  sudo: yes
+  shell: iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+
+- name: have open port 8080 to the world (webhook) 
+  sudo: yes
+  shell: iptables -A INPUT -p tcp --dport 8080 -j ACCEPT
   
 - name: have a bunch of different apt packages
   sudo: yes    
@@ -61,6 +69,10 @@
   sudo: yes 
   npm: name=forever global=yes
 
+- name: have moment installed
+  sudo: yes
+  npm: name=moment global=yes
+
 - name: have jekyll-hook repo 
   sudo: yes
   git: repo=https://github.com/developmentseed/jekyll-hook.git dest=/jekyll-hook
@@ -77,7 +89,7 @@
 
 - name: have correct publish script 
   sudo: yes
-  copy: src=publish.sh dest=/jekyll-hook
+  copy: src=publish.sh dest=/jekyll-hook/scripts/ force=yes
 
 - name: have cs-lunch website repo
   sudo: yes
