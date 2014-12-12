@@ -60,7 +60,6 @@
   shell: gem install jekyll rdiscount json executable="/bin/bash"
   environment:
         PATH: /usr/local/rvm/bin/:/usr/local/rvm/rubies/ruby-1.9.3-p551/bin/:{{ ansible_env.PATH }} 
-      #executable=true
       
 - name: have forever installed 
   sudo: yes 
