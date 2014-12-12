@@ -28,9 +28,6 @@
      - nodejs
      - git 
      - apache2
-#     - npm
-#     - ruby1.9.3
-#     - ruby-dev
 
 - name: have rvm and that jazz
   sudo: yes
@@ -94,7 +91,6 @@
 - name: have cs-lunch website repo
   sudo: yes
   git: repo=https://github.com/fjukstad/cs-lunch.git dest=/lunch
-
 
 - name: have built the webpage
   sudo: yes 
