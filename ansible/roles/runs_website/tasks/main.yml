@@ -101,6 +101,6 @@
   sudo: yes 
   service: name=apache2 state=restarted 
 
-- name: have jekyll-hook started 
-  sudo: yes
-  shell: forever start jekyll-hook.js chdir=/jekyll-hook 
+#- name: have jekyll-hook started 
+#  sudo: yes
+#  shell: forever start jekyll-hook.js chdir=/jekyll-hook 
