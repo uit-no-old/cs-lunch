@@ -3,8 +3,6 @@ layout: page
 title: Schedule
 permalink: /schedule/
 ---
-We're starting in the third week of January. Stay tuned! 
-
 
 # Tuesday January 20. 2015 13:15 - 15:00 Lille Aud
 [Bjørn Fjukstad, Kvik: Interactive exploration of genomic data from the NOWAC 
