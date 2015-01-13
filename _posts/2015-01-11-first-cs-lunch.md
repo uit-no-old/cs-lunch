@@ -8,6 +8,8 @@ On Tuesday January 20. at 13:15 - 15:00 in Lille Aud. Bjørn Fjukstad is present
 NOWAC postgenome biobank.](http://ojs.bibsys.no/index.php/NIK/article/view/11)
 This paper was originally presented at [NIK2014](http://nik2014.hiof.no). 
 
+[Sign up here!](http://uit.no/om/enhet/aktuelt/arrangement?p_document_id=401060&p_dimension_id=88138)
+
 <br/> 
 
 **Kvik: Interactive exploration of genomic data from the NOWAC postgenome biobank**
