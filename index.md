@@ -7,9 +7,7 @@ University of Tromsø. Ph. D. students at the department will present their
 accepted conference and journal papers for both academic staff and students.
 
 
-We are beginning the seminar series in January 2015, and we're hoping to see you
-there! 
-
+The next CS-lunch will be fall 2015. 
 
 
 ### Latest News
